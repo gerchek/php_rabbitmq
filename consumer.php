@@ -49,6 +49,7 @@ echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 // };
 
 $callback = function ($msg) {
+    // test
     $logMessage = ' [x] Received ' . $msg->body . "\n";
     file_put_contents('logfile.txt', $logMessage, FILE_APPEND);
 };
