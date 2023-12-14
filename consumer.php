@@ -44,8 +44,13 @@ echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
 Определите обратный вызов для потребления сообщений
 Эта анонимная функция будет вызываться при использовании сообщения. Он повторяет полученное сообщение.
 */
+// $callback = function ($msg) {
+//     echo ' [x] Received ', $msg->body, "\n";
+// };
+
 $callback = function ($msg) {
-    echo ' [x] Received ', $msg->body, "\n";
+    $logMessage = ' [x] Received ' . $msg->body . "\n";
+    file_put_contents('logfile.txt', $logMessage, FILE_APPEND);
 };
 
 /* 

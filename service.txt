@@ -1,0 +1,36 @@
+/etc/systemd/system/consumer.service
+
+
+
+
+
+[Unit]
+Description=My PHP Consumer Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/php /path/to/your/consumer.php
+Restart=always
+User=your_username
+Group=your_groupname
+Environment=PATH=/usr/bin
+WorkingDirectory=/path/to/your/
+
+[Install]
+WantedBy=default.target
+
+
+[Install]
+WantedBy=default.target
+
+
+
+
+sudo systemctl daemon-reload
+
+
+sudo systemctl start consumer.service
+sudo systemctl enable consumer.service
+
+
+sudo systemctl status consumer.service

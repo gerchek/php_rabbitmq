@@ -4,4 +4,5 @@ https://www.cherryservers.com/blog/how-to-install-and-start-using-rabbitmq-on-ub
 выполнять различные задачи управления и мониторинга через веб-интерфейс
 
 admin panel - http://localhost:15672/
-server - http://localhost:15672/
+
+server - http://localhost:5672/
