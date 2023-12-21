@@ -1,3 +1,5 @@
+###создать  демон
+
 /etc/systemd/system/consumer.service
 
 
@@ -34,3 +36,11 @@ sudo systemctl enable consumer.service
 
 
 sudo systemctl status consumer.service
+
+
+###работа с демонам 
+
+sudo systemctl start consumer.service
+sudo systemctl stop consumer.service
+sudo systemctl status consumer.service
+sudo systemctl restart consumer.service
